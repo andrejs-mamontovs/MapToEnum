@@ -24,7 +24,7 @@ public class Linker<T:RawRepresentable>{
 
 infix operator <-;
 
-public func <- <T>(f: inout T?, v: Any) {
+public func <- <T>(f: inout T?, v: Any?) {
     if let i = v as? T {
         f = i;
     }

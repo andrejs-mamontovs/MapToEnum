@@ -12,8 +12,8 @@ class MapToEnumTests: XCTestCase {
         let map = Map.link(arr, and: Field.self)
 
         let data = Item()
-        data.Id <- map[.Id]!
-        data.Name <- map[.Name]!
+        data.Id <- map[.Id]
+        data.Name <- map[.Name]
 
         XCTAssertEqual(data.Id, 1)
         XCTAssertEqual(data.Name, "Record #1")
