@@ -11,8 +11,12 @@ public class Linker<T:RawRepresentable>{
         self.data = data;
     }
     
-    public func getValue(_ value: T) -> Any? {
+    func getValue(_ value: T) -> Any? {
         return data[value.rawValue as! String]
+    }
+
+    public func get<O>(_ name: T) -> O? {
+        return getValue(name) as? O
     }
     
     public subscript(name: T) -> Any? {
